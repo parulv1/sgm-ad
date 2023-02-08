@@ -1,30 +1,18 @@
-# spectrome-revisited
+# Spectral graph modeling reveals global slowing of neurophysiological network transmission in Alzheimer's disease
 
-`Spectrome` is a combination of the words "spectrum" and "connectome". This package is the collection of codes that constructed the analysis for the preprint ["Spectral graph theory of brain oscillations - revisited and improved"](https://www.biorxiv.org/content/10.1101/2021.09.28.462078v1). This repository is developed based on the original model's [repository](https://github.com/Raj-Lab-UCSF/spectrome).
+`Spectrome` is a combination of the words "spectrum" and "connectome". This package is the collection of codes that constructed the analysis for the preprint ["Spectral graph modeling reveals global slowing of neurophysiological network transmission in Alzheimer's disease"](). This repository is developed based on the original model's [repository](https://github.com/Raj-Lab-UCSF/spectrome).
 
 The spectral graph model (SGM) is a brain structure-function model that simulates brain activity power spectrum given a structural connectome. The model is linear, low-dimensional, and provides an analytical relationship between the brain's structural and functional patterns.
 
 ## Citation:
-The code in this repository is used for the analysis as shown in: Parul Verma, Srikantan Nagarajan, and Ashish Raj. “Spectral Graph Theory of Brain Oscillations - revisited and improved” (https://www.biorxiv.org/content/10.1101/2021.09.28.462078v1). If you found this useful, please cite the following:
+The code in this repository is used for the analysis as shown in: Parul Verma, Srikantan Nagarajan, and Ashish Raj. “Spectral graph modeling reveals global slowing of neurophysiological network transmission in Alzheimer's disease” (). If you found this useful, please cite the following:
 
 ```
-@article {verma2021spectral,
-	author = {Verma, Parul and Nagarajan, Srikantan and Raj, Ashish},
-	title = {Spectral graph theory of brain oscillations -- revisited and improved},
-	elocation-id = {2021.09.28.462078},
-	year = {2021},
-	doi = {10.1101/2021.09.28.462078},
-	publisher = {Cold Spring Harbor Laboratory},
-	URL = {https://www.biorxiv.org/content/early/2021/09/30/2021.09.28.462078},
-	eprint = {https://www.biorxiv.org/content/early/2021/09/30/2021.09.28.462078.full.pdf},
-	journal = {bioRxiv}
-}
+To be updated
 ```
 
 ## Abstract:
-Mathematical modeling of the relationship between the functional activity and the structural wiring of the brain has largely been undertaken using non-linear and biophysically detailed mathematical models with regionally varying parameters. While this approach provides us a rich repertoire of multistable dynamics that can be displayed by the brain, it is computationally demanding. Moreover, although neuronal dynamics at the microscopic level are nonlinear and chaotic, it is unclear if such detailed nonlinear models are required to capture the emergent meso- (regional population ensemble) and macro-scale (whole brain) behavior, which is largely deterministic and reproducible across individuals. Indeed, recent modeling effort based on spectral graph theory has shown that an analytical model without regionally varying parameters can capture the empirical magnetoencephalography frequency spectra and the spatial patterns of the alpha and beta frequency bands accurately. 
-
-In this work, we demonstrate an improved hierarchical, linearized, and analytic spectral graph theory-based model that can capture the frequency spectra obtained from magnetoencephalography recordings of resting healthy subjects. We reformulated the spectral graph theory model in line with classical neural mass models, therefore providing more biologically interpretable parameters, especially at the local scale. We demonstrated that this model performs better than the original model when comparing the spectral correlation of modeled frequency spectra and that obtained from the magnetoencephalography recordings. This model also performs equally well in predicting the spatial patterns of the empirical alpha and beta frequency bands.
+Alzheimer's disease (AD) is the most common form of dementia, progressively impairing memory and cognition. While various neuroimaging studies have revealed functional network abnormalities in patients with AD, how these relate to aberrant  neuronal circuit mechanisms remains unclear. We employed a spectral graph-theory model (SGM) to identify abnormal biophysical markers of neuronal activity in AD. SGM is an analytic model that describes how long-range fiber projections in the brain mediate and couple excitatory and inhibitory activity of local neuronal subpopulations. Unlike other coupled neuronal mass models, the SGM is linear, available in closed-form, and parameterized by a small set of global parameters that facilitate rapid and unambiguous model inference. We performed SGM inference with resting state magnetoencephalography (MEG) imaging data on a well-characterized clinical population of patients with AD and a cohort of age-matched controls. We estimated model parameters that best captured the regional power spectra across frequency. Patients with AD had significantly elevated long-range excitatory neuronal time constant, local inhibitory neural gain, and local excitatory time constant. Long-range excitatory time constant had the highest effect size and was also the most important feature for the accurate classification of patients with AD from controls. Furthermore, a higher time constant was associated with a greater decline in global cognition. These results indicate that abnormal spectral signatures in AD can be reliably and succinctly explained by the SGM. Intriguingly, our work is able to recapitulate the spatial and spectral patterns of AD-related functional activity without introducing any spatial heterogeneity; indeed, the SGM model is entirely global and spatially-invariant. This raises the possibility that a global increase in the long-range excitatory time constant might be a sufficient factor underlying observed spatiotemporal alterations of neuronal activity in AD. Our findings provide new insights into potential mechanistic links between abnormal neural oscillations and their cellular correlates in AD.
 
 ## Set-up:
 
@@ -45,10 +33,9 @@ If you want to be able to run `spectrome` from anywhere, just add it's path to y
 After completing the set-up for conda environment and `spectrome` path, you may go to the `spectrome` folder and type `jupyter notebook` or `jupyter lab` in your terminal to run the Jupyter notebooks.
 
 ## Files:
- - `../spectrome/notebooks`: contains three jupyter notebooks, `run_model_example.ipynb` is the basic simulation of frequency spectrums with default parameters for the HCP template connectome. `spatialcorrelation.ipynb` looks at the spatial correlations between the eigenmodes and the empirical spectra, and `reproduce_MEG_modeled_spectra.ipynb` compares optimized modeled spectra with the MEG spectra.
+ - `../spectrome/notebooks`: contains three jupyter notebooks, `run_model_example.ipynb` is the basic simulation of frequency spectrums with optimized parameters for controls and AD. `AD_CONT_stats.ipynb` shows the basic statistical corelations of parameters with MMSE and CDR in AD, and `AD_CONT_classification.ipynb` develops a random forest classifier with the optimized SGM parameters as features of the classifier.
 
  - `../spectrome/data`: contains intermediate data.
-    - `mean80_fibercount/length.csv`: HCP template connectome and distance matrix.
-    - `individual_connectomes_reordered.nc`: individual subject's connectivity matrices (N = 36).
-    - `individual_psd_reordered_matlab.nc`: individual subject's MEG spectra (N = 36).
-    - `MSGM_Reordered_matlab_500iter.csv`: optimized model parameters for the 36 subjects.
+    - `mean80_fibercount/count.csv`: HCP template connectome
+    - `mean80_fibercount/length.csv`: HCP template distance matrix.
+
