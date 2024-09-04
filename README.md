@@ -1,18 +1,42 @@
-# Spectral graph modeling reveals global slowing of neurophysiological network transmission in Alzheimer's disease
+# Impaired long-range excitatory time scale predicts abnormal neural oscillations and cognitive deficits in Alzheimer’s disease   
 
-`Spectrome` is a combination of the words "spectrum" and "connectome". This package is the collection of codes that constructed the analysis for the preprint ["Spectral graph modeling reveals global slowing of neurophysiological network transmission in Alzheimer's disease"](). This repository is developed based on the original model's [repository](https://github.com/Raj-Lab-UCSF/spectrome).
+`Spectrome` is a combination of the words "spectrum" and "connectome". This package is the collection of codes that constructed the analysis for the preprint ["Impaired long-range excitatory time scale predicts abnormal neural oscillations and cognitive deficits in Alzheimer’s disease "](https://alzres.biomedcentral.com/articles/10.1186/s13195-024-01426-7#Sec1). This repository is developed based on the original model's [repository](https://github.com/Raj-Lab-UCSF/spectrome).
 
 The spectral graph model (SGM) is a brain structure-function model that simulates brain activity power spectrum given a structural connectome. The model is linear, low-dimensional, and provides an analytical relationship between the brain's structural and functional patterns.
 
 ## Citation:
-The code in this repository is used for the analysis as shown in: Parul Verma, Srikantan Nagarajan, and Ashish Raj. “Spectral graph modeling reveals global slowing of neurophysiological network transmission in Alzheimer's disease” (). If you found this useful, please cite the following:
+The code in this repository is used for the analysis as shown in: Verma et al. “Impaired long-range excitatory time scale predicts abnormal neural oscillations and cognitive deficits in Alzheimer’s disease ” (2024). If you found this useful, please cite the following:
 
 ```
-To be updated
+@article{verma2024impaired,
+  title={Impaired long-range excitatory time scale predicts abnormal neural oscillations and cognitive deficits in Alzheimer’s disease},
+  author={Verma, Parul and Ranasinghe, Kamalini and Prasad, Janani and Cai, Chang and Xie, Xihe and Lerner, Hannah and Mizuiri, Danielle and Miller, Bruce and Rankin, Katherine and Vossel, Keith and others},
+  journal={Alzheimer's Research \& Therapy},
+  volume={16},
+  number={1},
+  pages={62},
+  year={2024},
+  publisher={Springer}
+}
+
 ```
 
 ## Abstract:
-Alzheimer's disease (AD) is the most common form of dementia, progressively impairing memory and cognition. While various neuroimaging studies have revealed functional network abnormalities in patients with AD, how these relate to aberrant  neuronal circuit mechanisms remains unclear. We employed a spectral graph-theory model (SGM) to identify abnormal biophysical markers of neuronal activity in AD. SGM is an analytic model that describes how long-range fiber projections in the brain mediate and couple excitatory and inhibitory activity of local neuronal subpopulations. Unlike other coupled neuronal mass models, the SGM is linear, available in closed-form, and parameterized by a small set of global parameters that facilitate rapid and unambiguous model inference. We performed SGM inference with resting state magnetoencephalography (MEG) imaging data on a well-characterized clinical population of patients with AD and a cohort of age-matched controls. We estimated model parameters that best captured the regional power spectra across frequency. Patients with AD had significantly elevated long-range excitatory neuronal time constant, local inhibitory neural gain, and local excitatory time constant. Long-range excitatory time constant had the highest effect size and was also the most important feature for the accurate classification of patients with AD from controls. Furthermore, a higher time constant was associated with a greater decline in global cognition. These results indicate that abnormal spectral signatures in AD can be reliably and succinctly explained by the SGM. Intriguingly, our work is able to recapitulate the spatial and spectral patterns of AD-related functional activity without introducing any spatial heterogeneity; indeed, the SGM model is entirely global and spatially-invariant. This raises the possibility that a global increase in the long-range excitatory time constant might be a sufficient factor underlying observed spatiotemporal alterations of neuronal activity in AD. Our findings provide new insights into potential mechanistic links between abnormal neural oscillations and their cellular correlates in AD.
+Background
+
+Alzheimer’s disease (AD) is the most common form of dementia, progressively impairing cognitive abilities. While neuroimaging studies have revealed functional abnormalities in AD, how these relate to aberrant neuronal circuit mechanisms remains unclear. Using magnetoencephalography imaging we documented abnormal local neural synchrony patterns in patients with AD. To identify global abnormal biophysical mechanisms underlying the spatial and spectral electrophysiological patterns in AD, we estimated the parameters of a biophysical spectral graph model (SGM).
+
+Methods
+
+SGM is an analytic neural mass model that describes how long-range fiber projections in the brain mediate the excitatory and inhibitory activity of local neuronal subpopulations. Unlike other coupled neuronal mass models, the SGM is linear, available in closed-form, and parameterized by a small set of biophysical interpretable global parameters. This facilitates their rapid and unambiguous inference which we performed here on a well-characterized clinical population of patients with AD (N = 88, age = 62.73 +/- 8.64 years) and a cohort of age-matched controls (N = 88, age = 65.07 +/- 9.92 years).
+
+Results
+
+Patients with AD showed significantly elevated long-range excitatory neuronal time scales, local excitatory neuronal time scales and local inhibitory neural synaptic strength. The long-range excitatory time scale had a larger effect size, compared to local excitatory time scale and inhibitory synaptic strength and contributed highest for the accurate classification of patients with AD from controls. Furthermore, increased long-range time scale was associated with greater deficits in global cognition.
+
+Conclusions
+
+These results demonstrate that long-range excitatory time scale of neuronal activity, despite being a global measure, is a key determinant in the local spectral signatures and cognition in the human brain, and how it might be a parsimonious factor underlying altered neuronal activity in AD. Our findings provide new insights into mechanistic links between abnormal local spectral signatures and global connectivity measures in AD.
 
 ## Set-up:
 
